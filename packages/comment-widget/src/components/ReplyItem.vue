@@ -123,7 +123,7 @@ const handleUpvote = async () => {
               v-if="!reply?.spec.approved"
               class="text-xs text-gray-500 dark:text-slate-400"
             >
-              审核中
+             Review in progress
             </span>
             <VTag
               v-if="false"
@@ -172,7 +172,7 @@ const handleUpvote = async () => {
             class="cursor-pointer select-none text-xs text-gray-600 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-400"
             @click="showForm = !showForm"
           >
-            回复
+            Reply
           </span>
         </div>
         <Form

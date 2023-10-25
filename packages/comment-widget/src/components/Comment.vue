@@ -146,10 +146,10 @@ provide<Ref<string[]>>("upvotedReplies", upvotedReplies);
       <div class="flex items-center">
         <div class="flex flex-auto items-center gap-1">
           <span class="text-sm font-medium text-gray-900 dark:text-slate-50">
-            {{ comments?.total || 0 }} 条评论
+            {{ comments?.total || 0 }} comments
           </span>
           <span v-if="false" class="font-bold">·</span>
-          <span v-if="false" class="text-sm text-gray-800">20 条回复</span>
+          <span v-if="false" class="text-sm text-gray-800">20 replies</span>
         </div>
         <div></div>
       </div>
@@ -159,11 +159,11 @@ provide<Ref<string[]>>("upvotedReplies", upvotedReplies);
       >
         <VLoading v-if="loading" class="dark:text-slate-100" />
         <Transition v-else-if="!comments.items.length" appear name="fade">
-          <VEmpty title="暂无评论" message="你可以尝试点击刷新或者添加新评论">
+          <VEmpty title="No comments" message="You can try clicking refresh or adding a new comment">
             <template #actions>
               <VSpace>
                 <VButton type="default" @click="handleFetchComments">
-                  刷新
+                  Refresh
                 </VButton>
               </VSpace>
             </template>

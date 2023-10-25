@@ -26,14 +26,14 @@ axiosInstance.interceptors.response.use(
   },
   async (error: AxiosError<ProblemDetail>) => {
     if (/Network Error/.test(error.message)) {
-      alert("网络错误，请检查网络连接");
+      alert("Network error, please check your network connection");
       return Promise.reject(error);
     }
 
     const errorResponse = error.response;
 
     if (!errorResponse) {
-      alert("网络错误，请检查网络连接");
+      alert("Network error, please check your network connection");
       return Promise.reject(error);
     }
 

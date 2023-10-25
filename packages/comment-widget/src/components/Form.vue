@@ -221,7 +221,7 @@ async function handleOpenEmojiPicker() {
   const data = await emojiData();
 
   if (!data) {
-    alert("加载 Emoji 数据失败");
+    alert("Loaded Emoji Data failure");
     emojiLoading.value = false;
   }
 
@@ -278,7 +278,7 @@ function handleOpenLoginPage() {
         required
         rows="4"
         class="rounded-base block w-full resize-y appearance-none bg-white px-3 py-2 text-sm text-black antialiased outline-0 ring-1 ring-gray-300 dark:bg-slate-700 dark:text-slate-50 dark:ring-slate-600"
-        placeholder="编写评论"
+        placeholder="Write a comment"
       ></textarea>
 
       <div
@@ -289,26 +289,26 @@ function handleOpenLoginPage() {
           v-model="customAccount.displayName"
           class="rounded-base h-9 px-2 py-0.5 text-sm outline-none ring-1 ring-gray-300 dark:bg-slate-700 dark:text-slate-50 dark:ring-slate-600"
           type="text"
-          placeholder="昵称"
+          placeholder="Nickname"
         />
         <input
           v-model="customAccount.email"
           class="rounded-base h-9 px-2 py-0.5 text-sm outline-none ring-1 ring-gray-300 dark:bg-slate-700 dark:text-slate-50 dark:ring-slate-600"
           type="email"
-          placeholder="电子邮件"
+          placeholder="Email"
         />
         <input
           v-model="customAccount.website"
           class="rounded-base h-9 px-2 py-0.5 text-sm outline-none ring-1 ring-gray-300 dark:bg-slate-700 dark:text-slate-50 dark:ring-slate-600"
           type="url"
-          placeholder="网站"
+          placeholder="WebSite"
         />
 
         <a
           class="select-none text-xs text-gray-600 transition-all hover:text-gray-900 dark:text-slate-200 dark:hover:text-slate-400"
           :href="loginUrl"
         >
-          （已有该站点的账号）
+          （Already have an account）
         </a>
       </div>
 
@@ -324,10 +324,10 @@ function handleOpenLoginPage() {
             <span class="text-sm font-medium dark:text-slate-50">
               {{ currentUser.spec.displayName }}
             </span>
-            <VButton size="sm" @click="handleLogout">注销</VButton>
+            <VButton size="sm" @click="handleLogout">Sign Out</VButton>
           </template>
           <template v-if="!currentUser && !allowAnonymousComments">
-            <VButton size="sm" @click="handleOpenLoginPage">登录</VButton>
+            <VButton size="sm" @click="handleOpenLoginPage">Sign In</VButton>
           </template>
         </div>
         <div class="flex flex-row items-center gap-3">
@@ -368,7 +368,7 @@ function handleOpenLoginPage() {
             <template #icon>
               <MdiSendCircleOutline class="h-full w-full" />
             </template>
-            提交评论
+            Submit comments
           </VButton>
         </div>
       </div>

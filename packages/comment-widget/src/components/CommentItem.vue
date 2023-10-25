@@ -160,7 +160,7 @@ const handleUpvote = async () => {
               v-if="!comment?.spec.approved"
               class="text-xs text-gray-500 dark:text-slate-400"
             >
-              审核中
+              Review in progress
             </span>
             <VTag
               v-if="isAuthor"
@@ -208,7 +208,7 @@ const handleUpvote = async () => {
             class="cursor-pointer select-none text-xs text-gray-600 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-400"
             @click="showForm = !showForm"
           >
-            加入回复
+            Join Reply
           </span>
         </div>
 
@@ -230,16 +230,16 @@ const handleUpvote = async () => {
               name="fade"
             >
               <VEmpty
-                title="暂无回复"
-                message="你可以尝试点击刷新或者添加新回复"
+                title="No comments"
+                message="You can try clicking refresh or adding a new comment"
               >
                 <template #actions>
                   <VSpace>
                     <VButton type="default" @click="handleFetchReplies">
-                      刷新
+                      Refresh
                     </VButton>
                     <VButton type="primary" @click="showForm = true">
-                      回复
+                      Reply
                     </VButton>
                   </VSpace>
                 </template>
